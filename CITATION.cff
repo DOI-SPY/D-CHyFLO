@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use D-CHyFLO, please cite this software release."
+type: software
+title: "D-CHyFLO: Carbon-aware hydropower–floating photovoltaic capacity design and coordinated dispatch"
+version: 0.1.0
+date-released: 2026-08-14
+authors:
+  - name: "DOI-SPY"
+repository-code: "https://github.com/DOI-SPY/D-CHyFLO"
+url: "https://github.com/DOI-SPY/D-CHyFLO"
+keywords:
+  - floating photovoltaic
+  - hydropower
+  - carbon-aware dispatch
+  - reservoir greenhouse gas
+  - lifecycle carbon
+  - cold-region uncertainty
