@@ -1,0 +1,59 @@
+# Site-specific files belong under data/raw_private and are not tracked.
+data:
+  reservoir: data/raw_private/reservoir_daily.csv
+  hva: data/raw_private/reservoir_hva.csv
+  meteorology: data/raw_private/nasa_power_hourly.csv
+  grid: data/raw_private/grid_fleet.csv
+
+hydro:
+  capacity_mw: 250.0          # Installed conventional hydropower capacity.
+  turbine_flow_limit_m3s: 1270.12
+  export_limit_mw: 250.0      # Shared hydro-FPV export limit.
+  efficiency: 0.90
+  minimum_level_m: 190.0
+  maximum_level_m: 216.0
+
+fpv:
+  capacity_mwac: 300.0        # Example design point, not a recommendation.
+  dc_ac_ratio: 1.2
+  latitude: 49.0
+  longitude: 125.0
+  timezone: Asia/Shanghai
+  tilt_degrees: 35.0
+  azimuth_degrees: 180.0
+  surface_power_density_mwp_per_km2: 98.75
+  coverage_screen_percent: 2.8
+  winter_scenarios:
+    no_cold_derate: 1.00
+    moderate_cold: 0.80
+    conservative_cold: 0.60
+
+counterfactuals:
+  energy_retention: 1.0       # Formal CF3 retained-energy requirement.
+
+mef:
+  perturbation_mw: [-250, -200, -150, -100, -50, 50, 100, 150, 200, 250]
+  relative_deviation_threshold: 0.10
+
+mcv:
+  perturbations_million_m3: [2.5, 5.0, 10.0, 20.0]
+
+capacity:
+  capacity_mwac: [150, 175, 200, 225, 250, 275, 300, 325, 350, 375, 400, 425, 450, 475, 500, 525, 550]
+  dc_ac_ratios: [1.0, 1.1, 1.2, 1.3, 1.4, 1.5]
+
+lifecycle:
+  horizon_years: 30
+  intensity_gco2e_per_kwh: [20, 36, 66, 94]
+  fpv_degradation_fraction_per_year: [0.003, 0.006]
+  grid_decline_fraction_per_year: [0.0, 0.03, 0.06]
+  replacement_year: 15
+  end_of_life_year: 30
+  module_d_credit: 0.0
+
+reservoir_ghg:
+  conditional_scenario_count: 32
+  covered_area_response_fraction: [-0.10, 0.0, 0.10]
+
+outputs:
+  directory: outputs

@@ -1,0 +1,52 @@
+data:
+  reservoir: data_example/reservoir_example.csv
+  hva: data_example/hva_example.csv
+  meteorology: data_example/meteorology_example.csv
+  grid: data_example/grid_example.csv
+
+hydro:
+  capacity_mw: 250.0
+  turbine_flow_limit_m3s: 1270.12
+  export_limit_mw: 250.0
+  efficiency: 0.90
+  minimum_level_m: 190.0
+  maximum_level_m: 216.0
+
+fpv:
+  capacity_mwac: 300.0
+  dc_ac_ratio: 1.2
+  latitude: 49.0
+  longitude: 125.0
+  timezone: Asia/Shanghai
+  tilt_degrees: 35.0
+  azimuth_degrees: 180.0
+  surface_power_density_mwp_per_km2: 98.75
+  coverage_screen_percent: 2.8
+  winter_scenarios:
+    no_cold_derate: 1.00
+    moderate_cold: 0.80
+    conservative_cold: 0.60
+
+counterfactuals:
+  energy_retention: 1.0
+mef:
+  perturbation_mw: [-250, -100, -50, 50, 100, 250]
+  relative_deviation_threshold: 0.10
+mcv:
+  perturbations_million_m3: [2.5, 5.0, 10.0, 20.0]
+capacity:
+  capacity_mwac: [150, 200, 250, 275, 300, 350, 400, 450, 500, 550]
+  dc_ac_ratios: [1.0, 1.2, 1.5]
+lifecycle:
+  horizon_years: 30
+  intensity_gco2e_per_kwh: [20, 36, 66, 94]
+  fpv_degradation_fraction_per_year: [0.003, 0.006]
+  grid_decline_fraction_per_year: [0.0, 0.03, 0.06]
+  replacement_year: 15
+  end_of_life_year: 30
+  module_d_credit: 0.0
+reservoir_ghg:
+  conditional_scenario_count: 32
+  covered_area_response_fraction: [-0.10, 0.0, 0.10]
+outputs:
+  directory: outputs

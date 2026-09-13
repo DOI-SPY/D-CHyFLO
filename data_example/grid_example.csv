@@ -1,0 +1,5 @@
+generator,fuel,capacity_mw,marginal_cost_per_mwh,emission_kgco2_per_mwh
+hydro_import,hydro,120,5,0
+wind_import,wind,80,10,0
+gas_ccgt,gas,220,45,390
+coal,coal,600,65,820
