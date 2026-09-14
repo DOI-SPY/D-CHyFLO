@@ -12,5 +12,6 @@ jobs:
           python-version: "3.12"
           cache: pip
       - run: python -m pip install -e ".[dev]"
+      - run: ruff check .
       - run: pytest
       - run: python scripts/run_all.py --config config/example.yaml
