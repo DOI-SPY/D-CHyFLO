@@ -133,6 +133,20 @@ python -m pip install --upgrade pip
 python -m pip install -e ".[dev]"
 ```
 
+### PyCharm on Windows
+
+1. Open the repository root as the PyCharm project.
+2. Select a Python 3.11 or newer virtual environment for the project.
+3. Open PyCharm's integrated terminal at the repository root and run:
+
+```powershell
+python -m pip install -e ".[dev]"
+```
+
+If `ModuleNotFoundError: No module named 'dchyflo'` occurs, confirm that the
+run configuration uses the same virtual environment. As an IDE-only fallback,
+mark the `src/` directory as a Sources Root.
+
 The public example uses a transparent merit-order full-grid redispatch. A private case
 study may replace this component with a network-constrained solver through the same
 input-output boundary.
